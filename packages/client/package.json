@@ -43,6 +43,7 @@
     "@gqlapp/contact-client-react": "^0.1.0",
     "@gqlapp/core-client-react": "^0.1.0",
     "@gqlapp/counter-client-react": "^0.1.0",
+    "@gqlapp/editor-client-react": "^1.0.0",
     "@gqlapp/forms-client-react": "^0.1.0",
     "@gqlapp/i18n-client-react": "^0.1.0",
     "@gqlapp/i18n-common-react": "^0.1.0",
@@ -88,6 +89,7 @@
     "react-ga": "^2.3.5",
     "react-helmet": "^5.2.0",
     "react-i18next": "^7.6.0",
+    "react-monaco-editor": "^0.25.1",
     "react-redux": "^5.0.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
@@ -150,7 +152,6 @@
     "uuid": "^3.3.2"
   },
   "peerDependencies": {
-    "@larix/zen": "^0.1.0",
     "eslint": "*"
   },
   "browserslist": {
