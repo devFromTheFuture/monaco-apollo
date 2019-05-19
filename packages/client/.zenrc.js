@@ -1,10 +1,11 @@
 const url = require('url');
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 
 const config = {
   builders: {
     web: {
       openBrowser: true,
-      dllExcludes: ['bootstrap'],
+      dllExcludes: ['bootstrap', 'monaco-editor-webpack-plugin'],
       defines: {
         __CLIENT__: true
       },
@@ -15,7 +16,7 @@ const config = {
   },
   options: {
     cache: '../../.cache',
-    ssr: true,
+    ssr: false,
     defines: {
       __DEV__: process.env.NODE_ENV !== 'production',
       __API_URL__: '"/graphql"',
@@ -24,7 +25,13 @@ const config = {
     webpackConfig: {
       devServer: {
         disableHostCheck: true
-      }
+      },
+      plugins: [
+        new MonacoWebpackPlugin({
+          // available options are documented at https://github.com/Microsoft/monaco-editor-webpack-plugin#options
+          languages: ['json']
+        })
+      ]
     }
   }
 };

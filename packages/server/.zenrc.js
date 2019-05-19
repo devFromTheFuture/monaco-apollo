@@ -17,7 +17,7 @@ const config = {
   options: {
     cache: '../../.cache',
     tsLoaderConfig: { transpileOnly: false, configFile: 'tsconfig.node.json' },
-    ssr: true,
+    ssr: false,
     minify: false,
     defines: {
       __DEV__: process.env.NODE_ENV !== 'production',
